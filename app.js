@@ -4,6 +4,7 @@ const cors = require("cors");
 // const https = require("https");
 // const fs = require("fs");
 const scheduleRoute = require('./routes/v1_1/schedule_route');
+const servicesRoute = require('./routes/v1_1/services_route');
 
 const app = express();
 const server = http.createServer(app);
@@ -30,7 +31,8 @@ app.use(cors({
 app.use(express.json());
 
 // Routes
-app.use('/api/v1.1/whisper/meeting', scheduleRoute);
+app.use('/api/v1.1/cal/schedule', scheduleRoute);
+app.use('/api/v1.1/cal/services', servicesRoute);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

@@ -1,0 +1,967 @@
+{
+    "1": {
+        "uid": "rcl7io9erpd",
+        "name": "Ib Mughal",
+        "email": "ib@gmail.com",
+        "description": "Senior App Developer",
+        "duration": "30",
+        "active": true,
+        "workingHours": {
+            "Sunday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Monday": {
+                "enabled": true,
+                "timeSlots": [
+                    {
+                        "time": "07:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "07:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "08:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "08:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "09:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "09:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "10:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "10:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "11:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "11:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "12:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "12:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "01:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "01:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "02:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "02:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "03:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "03:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "04:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "04:30 PM",
+                        "status": "available"
+                    }
+                ]
+            },
+            "Tuesday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Wednesday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Thursday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Friday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Saturday": {
+                "enabled": false,
+                "timeSlots": []
+            }
+        }
+    },
+    "2": {
+        "uid": "no7k08uo8x",
+        "name": "Shahzaib Mirza",
+        "email": "shahzaib@gmail.com",
+        "description": "Senior Data Pipeline Engineer",
+        "duration": "30",
+        "active": true,
+        "workingHours": {
+            "Sunday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Monday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Tuesday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Wednesday": {
+                "enabled": true,
+                "timeSlots": [
+                    {
+                        "time": "07:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "07:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "08:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "08:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "09:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "09:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "10:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "10:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "11:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "11:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "12:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "12:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "01:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "01:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "02:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "02:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "03:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "03:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "04:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "04:30 PM",
+                        "status": "available"
+                    }
+                ]
+            },
+            "Thursday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Friday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Saturday": {
+                "enabled": false,
+                "timeSlots": []
+            }
+        }
+    },
+    "3": {
+        "uid": "onsg9gbtq8f",
+        "name": "Shameer",
+        "email": "shameer@gmail.com",
+        "description": "Senior Web Developer",
+        "duration": "40",
+        "active": true,
+        "workingHours": {
+            "Sunday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Monday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Tuesday": {
+                "enabled": true,
+                "timeSlots": [
+                    {
+                        "time": "07:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "07:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "08:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "08:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "09:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "09:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "10:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "10:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "11:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "11:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "12:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "12:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "01:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "01:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "02:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "02:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "03:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "03:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "04:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "04:30 PM",
+                        "status": "available"
+                    }
+                ]
+            },
+            "Wednesday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Thursday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Friday": {
+                "enabled": true,
+                "timeSlots": [
+                    {
+                        "time": "07:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "07:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "08:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "08:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "09:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "09:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "10:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "10:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "11:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "11:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "12:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "12:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "01:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "01:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "02:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "02:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "03:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "03:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "04:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "04:30 PM",
+                        "status": "available"
+                    }
+                ]
+            },
+            "Saturday": {
+                "enabled": false,
+                "timeSlots": []
+            }
+        }
+    },
+    "4": {
+        "uid": "8elo63k7k1p",
+        "name": "Usama",
+        "email": "butt@gmail.com",
+        "description": "Senior AI Engineer",
+        "duration": "30",
+        "active": true,
+        "workingHours": {
+            "Sunday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Monday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Tuesday": {
+                "enabled": true,
+                "timeSlots": [
+                    {
+                        "time": "07:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "07:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "08:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "08:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "09:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "09:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "10:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "10:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "11:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "11:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "12:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "12:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "01:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "01:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "02:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "02:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "03:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "03:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "04:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "04:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "05:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "05:30 PM",
+                        "status": "available"
+                    }
+                ]
+            },
+            "Wednesday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Thursday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Friday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Saturday": {
+                "enabled": false,
+                "timeSlots": []
+            }
+        }
+    },
+    "5": {
+        "uid": "q9fdldq7rfr",
+        "name": "Prince William",
+        "email": "william@gmail.com",
+        "description": "ML DevOps Engineer",
+        "duration": "30",
+        "active": true,
+        "workingHours": {
+            "Sunday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Monday": {
+                "enabled": true,
+                "timeSlots": [
+                    {
+                        "time": "07:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "07:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "08:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "08:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "09:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "09:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "10:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "10:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "11:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "11:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "12:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "12:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "01:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "01:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "02:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "02:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "03:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "03:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "04:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "04:30 PM",
+                        "status": "available"
+                    }
+                ]
+            },
+            "Tuesday": {
+                "enabled": true,
+                "timeSlots": [
+                    {
+                        "time": "07:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "07:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "08:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "08:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "09:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "09:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "10:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "10:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "11:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "11:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "12:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "12:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "01:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "01:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "02:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "02:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "03:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "03:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "04:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "04:30 PM",
+                        "status": "available"
+                    }
+                ]
+            },
+            "Wednesday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Thursday": {
+                "enabled": true,
+                "timeSlots": [
+                    {
+                        "time": "07:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "07:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "08:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "08:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "09:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "09:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "10:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "10:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "11:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "11:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "12:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "12:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "01:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "01:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "02:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "02:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "03:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "03:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "04:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "04:30 PM",
+                        "status": "available"
+                    }
+                ]
+            },
+            "Friday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Saturday": {
+                "enabled": false,
+                "timeSlots": []
+            }
+        }
+    },
+    "6": {
+        "uid": "zlxxqyut8xk",
+        "name": "Gull",
+        "email": "gull@gmail.com",
+        "description": "Junior ML Engineer",
+        "duration": "30",
+        "active": true,
+        "workingHours": {
+            "Sunday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Monday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Tuesday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Wednesday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Thursday": {
+                "enabled": false,
+                "timeSlots": []
+            },
+            "Friday": {
+                "enabled": true,
+                "timeSlots": [
+                    {
+                        "time": "07:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "07:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "08:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "08:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "09:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "09:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "10:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "10:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "11:00 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "11:30 AM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "12:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "12:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "01:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "01:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "02:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "02:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "03:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "03:30 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "04:00 PM",
+                        "status": "available"
+                    },
+                    {
+                        "time": "04:30 PM",
+                        "status": "available"
+                    }
+                ]
+            },
+            "Saturday": {
+                "enabled": false,
+                "timeSlots": []
+            }
+        }
+    }
+}

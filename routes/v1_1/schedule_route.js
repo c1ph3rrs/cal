@@ -56,18 +56,25 @@ router.post('/add_schedule', (req, res) => {
                         const duration = parseInt(schedule.duration);
                         
                         while (startTime < endTime) {
-                            const timeSlot = startTime.toLocaleTimeString('en-US', {
+                            const currentStartTime = startTime.toLocaleTimeString('en-US', {
                                 hour: '2-digit',
                                 minute: '2-digit',
                                 hour12: true
                             });
-                            
-                            processedSchedule.workingHours[day].timeSlots.push({
-                                time: timeSlot,
-                                status: "available"
-                            });
 
                             startTime.setMinutes(startTime.getMinutes() + duration);
+                            
+                            const currentEndTime = startTime.toLocaleTimeString('en-US', {
+                                hour: '2-digit',
+                                minute: '2-digit', 
+                                hour12: true
+                            });
+
+                            processedSchedule.workingHours[day].timeSlots.push({
+                                start_time: currentStartTime,
+                                end_time: currentEndTime,
+                                status: "available"
+                            });
                         }
                     });
                 }
@@ -75,6 +82,13 @@ router.post('/add_schedule', (req, res) => {
 
             processedSchedules[key] = processedSchedule;
         }
+
+        // Write processed schedules to data.json
+        const fs = require('fs');
+        const path = require('path');
+        const dataFilePath = path.join(__dirname, '..', 'data.json');
+        
+        fs.writeFileSync(dataFilePath, JSON.stringify(processedSchedules, null, 4), 'utf8');
 
         res.status(200).json({
             success: true,

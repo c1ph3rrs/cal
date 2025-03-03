@@ -5,6 +5,7 @@ const cors = require("cors");
 // const fs = require("fs");
 const scheduleRoute = require('./routes/v1_1/schedule_route');
 const servicesRoute = require('./routes/v1_1/services_route');
+const bookingRoute = require('./routes/v1_1/booking_route');
 
 const app = express();
 const server = http.createServer(app);
@@ -33,6 +34,8 @@ app.use(express.json());
 // Routes
 app.use('/api/v1.1/cal/schedule', scheduleRoute);
 app.use('/api/v1.1/cal/services', servicesRoute);
+app.use('/api/v1.1/cal/booking', bookingRoute);
+
 
 // Error handling middleware
 app.use((err, req, res, next) => {

@@ -26,6 +26,63 @@ router.get('/all/:uid', (req, res) => {
 
 })
 
+router.get('/show/bookings/:sid', (req, res) => {
+
+    try {
+        const { sid } = req.params;
+
+        const bookedSlots = require('../booked.json');
+        const currentDate = new Date();
+
+        // Filter bookings by service_uid and future dates
+        const upcomingBookings = bookedSlots.filter(booking => {
+            // Check if service_uid matches
+            if (booking.service_uid !== sid) {
+                return false;
+            }
+
+            // Parse the date string into components
+            const [dayName, month, day, year] = booking.meeting_date.split(' ');
+            const monthNum = new Date(Date.parse(month + " 1, 2000")).getMonth();
+            
+            // Create date object from components
+            const bookingDate = new Date(year, monthNum, parseInt(day.replace(',', '')));
+            
+            // Set times to midnight for date comparison
+            bookingDate.setHours(0,0,0,0);
+            const compareDate = new Date(currentDate);
+            compareDate.setHours(0,0,0,0);
+
+            return bookingDate >= compareDate;
+        });
+
+        upcomingBookings.sort((a, b) => {
+            const [aDayName, aMonth, aDay, aYear] = a.meeting_date.split(' ');
+            const [bDayName, bMonth, bDay, bYear] = b.meeting_date.split(' ');
+            
+            const aMonthNum = new Date(Date.parse(aMonth + " 1, 2000")).getMonth();
+            const bMonthNum = new Date(Date.parse(bMonth + " 1, 2000")).getMonth();
+
+            const aDate = new Date(aYear, aMonthNum, parseInt(aDay.replace(',', '')));
+            const bDate = new Date(bYear, bMonthNum, parseInt(bDay.replace(',', '')));
+
+            return aDate - bDate;
+        });
+
+        res.status(200).json({
+            success: true,
+            data: upcomingBookings
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: "Error fetching bookings",
+            error: error.message
+        });
+    }
+
+})
+
 router.post('/book/meeting', (req, res) => {
     try {
         const { service_uid, date, duration, start_time, end_time, user, organizer, meeting_url } = req.body;

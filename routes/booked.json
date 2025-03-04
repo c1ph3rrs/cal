@@ -163,5 +163,170 @@
         "meeting_venue": "Google Meet",
         "timezone": "UTC",
         "meeting_url": "https://meet.google.com/no7-k08u-o9y"
+    },
+    {
+        "uid": "qxeeqwh8a",
+        "created_at": "2025-03-04T09:04:11.105Z",
+        "meeting_date": "Wednesday, Mar 5, 2025",
+        "duration": "30",
+        "slot": {
+            "start_time": "09:00 AM",
+            "end_time": "09:30 AM"
+        },
+        "user_id": "hackblackcity@gmail.com",
+        "service_uid": "gnb1a59686j",
+        "attendee": {
+            "email": "hackblackcity@gmail.com",
+            "name": "Hack City",
+            "phone_no": "0588423230",
+            "notes": "dsafsf"
+        },
+        "organizer": {
+            "email": "elitesoftuae@gmail.com",
+            "name": "WhisperCRM"
+        },
+        "booking_status": [
+            {
+                "status": "booked",
+                "datetime": "2025-03-04T09:04:11.105Z"
+            }
+        ],
+        "booking_status_updated_at": "2025-03-04T09:04:11.105Z",
+        "meeting_status": "pending",
+        "meeting_venue": "Google Meet",
+        "timezone": "UTC",
+        "meeting_url": "https://meet.google.com/no7-k08u-o9y"
+    },
+    {
+        "uid": "voui5kl8r",
+        "created_at": "2025-03-04T10:04:16.584Z",
+        "meeting_date": "Wednesday, Mar 5, 2025",
+        "duration": "30",
+        "slot": {
+            "start_time": "09:30 AM",
+            "end_time": "10:00 AM"
+        },
+        "user_id": "hackblackcity@gmail.com",
+        "service_uid": "gnb1a59686j",
+        "attendee": {
+            "email": "hackblackcity@gmail.com",
+            "name": "Hack City",
+            "phone_no": "0588423230",
+            "notes": "3425fdgs"
+        },
+        "organizer": {
+            "email": "elitesoftuae@gmail.com",
+            "name": "WhisperCRM"
+        },
+        "booking_status": [
+            {
+                "status": "booked",
+                "datetime": "2025-03-04T10:04:16.584Z"
+            }
+        ],
+        "booking_status_updated_at": "2025-03-04T10:04:16.584Z",
+        "meeting_status": "pending",
+        "meeting_venue": "Google Meet",
+        "timezone": "UTC",
+        "meeting_url": "https://meet.google.com/no7-k08u-o9y"
+    },
+    {
+        "uid": "oxmgqdctn",
+        "created_at": "2025-03-04T10:08:33.798Z",
+        "meeting_date": "Thursday, Mar 6, 2025",
+        "duration": "45",
+        "slot": {
+            "start_time": "10:00 AM",
+            "end_time": "10:30 AM"
+        },
+        "user_id": "hackblackcity@gmail.com",
+        "service_uid": "6rflhzquqbp",
+        "attendee": {
+            "email": "hackblackcity@gmail.com",
+            "name": "Hack City",
+            "phone_no": "0588423230",
+            "notes": "Whispercrm demo"
+        },
+        "organizer": {
+            "email": "ib.elitesoft@gmail.com",
+            "name": "Ib Mughal"
+        },
+        "booking_status": [
+            {
+                "status": "booked",
+                "datetime": "2025-03-04T10:08:33.798Z"
+            }
+        ],
+        "booking_status_updated_at": "2025-03-04T10:08:33.798Z",
+        "meeting_status": "pending",
+        "meeting_venue": "Google Meet",
+        "timezone": "UTC",
+        "meeting_url": "https://meet.google.com/cuj-eomw-jzg"
+    },
+    {
+        "uid": "mnmet1s2s",
+        "created_at": "2025-03-04T10:10:07.327Z",
+        "meeting_date": "Wednesday, Mar 12, 2025",
+        "duration": "30",
+        "slot": {
+            "start_time": "10:00 AM",
+            "end_time": "10:30 AM"
+        },
+        "user_id": "hackblackcity@gmail.com",
+        "service_uid": "gnb1a59686j",
+        "attendee": {
+            "email": "hackblackcity@gmail.com",
+            "name": "Hack City",
+            "phone_no": "0588423230",
+            "notes": "dhsjkbbhjsd"
+        },
+        "organizer": {
+            "email": "elitesoftuae@gmail.com",
+            "name": "WhisperCRM"
+        },
+        "booking_status": [
+            {
+                "status": "booked",
+                "datetime": "2025-03-04T10:10:07.327Z"
+            }
+        ],
+        "booking_status_updated_at": "2025-03-04T10:10:07.327Z",
+        "meeting_status": "pending",
+        "meeting_venue": "Google Meet",
+        "timezone": "UTC",
+        "meeting_url": "https://meet.google.com/huk-hrjd-mda"
+    },
+    {
+        "uid": "azaevnfam",
+        "created_at": "2025-03-04T10:12:02.110Z",
+        "meeting_date": "Wednesday, Mar 5, 2025",
+        "duration": "30",
+        "slot": {
+            "start_time": "11:30 AM",
+            "end_time": "12:00 PM"
+        },
+        "user_id": "hackblackcity@gmail.com",
+        "service_uid": "gnb1a59686j",
+        "attendee": {
+            "email": "hackblackcity@gmail.com",
+            "name": "Hack City",
+            "phone_no": "0588423230",
+            "notes": "This is demo booking"
+        },
+        "organizer": {
+            "email": "elitesoftuae@gmail.com",
+            "name": "WhisperCRM"
+        },
+        "booking_status": [
+            {
+                "status": "booked",
+                "datetime": "2025-03-04T10:12:02.110Z"
+            }
+        ],
+        "booking_status_updated_at": "2025-03-04T10:12:02.110Z",
+        "meeting_status": "pending",
+        "meeting_venue": "Google Meet",
+        "timezone": "UTC",
+        "meeting_url": "https://meet.google.com/iqp-xtxi-wqm"
     }
 ]

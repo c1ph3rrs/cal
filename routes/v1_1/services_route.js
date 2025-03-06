@@ -1,62 +1,111 @@
 const express = require("express");
 const router = express.Router();
 
+const { sql, connectToDatabase } = require('../../db_connection');
 
-router.get('/all', (req, res) => {
 
-    const data = require('../data.json');
-    
-    const services = Object.values(data).map(service => ({
-        uid: service.uid,
-        name: service.name,
-        email: service.email,
-        description: service.description,
-        duration: service.duration
-    }));
+router.get('/all', async (req, res) => {
 
-    res.json(services);
+    try {
+
+        const pool = await connectToDatabase();
+
+        const result = await pool.request().query(
+            `
+            SELECT [u_id]
+                    ,[service_name]
+                    ,[email_address]
+                    ,[service_description]
+                    ,[meeting_duration]
+                    FROM [dbo].[Whisper_CalServiceMaster]
+            `
+        );
+
+        const services = result.recordset.map(service => ({
+            uid: service.u_id,
+            name: service.service_name,
+            email: service.email_address,
+            description: service.service_description,
+            duration: service.meeting_duration
+        }));
+
+        res.status(200).json(services);
+
+    }catch (error){
+        res.status(500).json({
+            success: false,
+            message: "Error fetching services",
+            error: error.message
+        });
+    }
 
 })
 
-router.get('/:uid', (req, res) => {
+router.get('/:uid', async (req, res) => {
     try {
-        const data = require('../data.json');
         const { uid } = req.params;
 
-        // Find service by matching uid
-        const serviceId = Object.keys(data).find(key => data[key].uid === uid);
-        const service = serviceId ? data[serviceId] : null;
+        const pool = await connectToDatabase();
 
-        if (!service) {
+        const result = await pool.request()
+            .input('uid', sql.VarChar, uid)
+            .query(
+                `
+                SELECT [id]
+                    ,[u_id]
+                    ,[service_code]
+                    ,[service_name]
+                    ,[service_description]
+                    ,[slot_break]
+                    ,[email_address]
+                    ,[working_hours]
+                    ,[meeting_duration]
+                    ,[is_enabled]
+                    ,[user_id]
+                    ,[company_id]
+                    ,[created_on]
+                FROM [dbo].[Whisper_CalServiceMaster] 
+                WHERE u_id = @uid
+                `
+            );
+
+        if (result.recordset.length === 0) {
             return res.status(404).json({
                 success: false,
                 message: "Service not found"
             });
         }
 
-        // Create simplified working hours without time slots
+        const service = result.recordset[0];
+        const workingHours = JSON.parse(service.working_hours || '{}');
+        
+        // Extract only enabled status from working hours
         const simplifiedWorkingHours = {};
-        Object.keys(service.workingHours).forEach(day => {
+        for (const day in workingHours) {
             simplifiedWorkingHours[day] = {
-                enabled: service.workingHours[day].enabled
+                enabled: workingHours[day]?.enabled || false
             };
-        });
-
-        // Create simplified service object
-        const simplifiedService = {
-            ...service,
-            workingHours: simplifiedWorkingHours
-        };
-
+        }
+        
         res.status(200).json({
             success: true,
-            data: simplifiedService
+            data: {
+                uid: service.u_id,
+                code: service.service_code,
+                name: service.service_name,
+                email: service.email_address,
+                description: service.service_description,
+                duration: service.meeting_duration,
+                slotBreak: service.slot_break,
+                active: service.is_enabled,
+                workingHours: simplifiedWorkingHours
+            }
         });
 
     } catch (error) {
         res.status(500).json({
-            success: false, 
-            message: "Error fetching schedule",
+            success: false,
+            message: "Error fetching service",
             error: error.message
         });
     }

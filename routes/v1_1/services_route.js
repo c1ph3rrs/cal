@@ -111,30 +111,35 @@ router.get('/:uid', async (req, res) => {
     }
 });
 
-router.get('/slots/:uid/:date', (req, res) => {
+router.get('/slots/:uid/:date', async (req, res) => {
     try {
-        const data = require('../data.json');
-        const bookedData = require('../booked.json');
+        const pool = await connectToDatabase();
         const { uid, date } = req.params;
 
-        // Find service by matching uid
-        const serviceId = Object.keys(data).find(key => data[key].uid === uid);
-        const service = serviceId ? data[serviceId] : null;
+        // Get service details
+        const serviceResult = await pool.request()
+            .input('uid', sql.VarChar, uid)
+            .query(`
+                SELECT [working_hours], [meeting_duration], [slot_break]
+                FROM [dbo].[Whisper_CalServiceMaster]
+                WHERE u_id = @uid
+            `);
 
-        if (!service) {
+        if (serviceResult.recordset.length === 0) {
             return res.status(404).json({
                 success: false,
                 message: "Service not found"
             });
         }
 
-        // Parse the date parameter
+        const service = serviceResult.recordset[0];
+        const workingHours = JSON.parse(service.working_hours || '{}');
+
+        // Parse and validate date
         const dateObj = new Date(date);
-        
-        // Validate date format
         if (isNaN(dateObj.getTime())) {
             return res.status(400).json({
-                success: false,
+                success: false, 
                 message: "Invalid date format. Use YYYY-MM-DD format"
             });
         }
@@ -143,7 +148,7 @@ router.get('/slots/:uid/:date', (req, res) => {
         const dayOfWeek = days[dateObj.getDay()];
 
         // Get working hours for that day
-        const daySchedule = service.workingHours[dayOfWeek];
+        const daySchedule = workingHours[dayOfWeek];
 
         if (!daySchedule || !daySchedule.enabled) {
             return res.json({
@@ -152,36 +157,45 @@ router.get('/slots/:uid/:date', (req, res) => {
             });
         }
 
-        // Format date to match booked.json format
-        const formattedDate = dateObj.toLocaleDateString('en-US', {
-            weekday: 'long',
-            month: 'short',
-            day: 'numeric',
-            year: 'numeric'
-        });
+        const startOfDay = new Date(dateObj.setHours(0,0,0,0));
+        const endOfDay = new Date(dateObj.setHours(23,59,59,999));
 
-        // Get booked slots for this service and date
-        const bookedSlots = bookedData.filter(booking => {
-            // Parse the meeting_date from booked.json to compare with requested date
-            const bookedDate = new Date(booking.meeting_date);
-            const requestedDate = new Date(date);
-            
-            return booking.service_uid === uid && 
-                   bookedDate.getDate() === requestedDate.getDate() &&
-                   bookedDate.getMonth() === requestedDate.getMonth() &&
-                   bookedDate.getFullYear() === requestedDate.getFullYear();
-        }).map(booking => booking.slot);
+        const bookedSlotsResult = await pool.request()
+            .input('service_uid', sql.VarChar, uid)
+            .input('start_date', sql.DateTime, startOfDay)
+            .input('end_date', sql.DateTime, endOfDay)
+            .query(`
+                SELECT [meeting_slot]
+                FROM [dbo].[Whisper_CalBookingMaster]
+                WHERE service_master_uid = @service_uid
+                AND meeting_datetime >= @start_date 
+                AND meeting_datetime < @end_date
+                AND booking_status = 'booked'
+            `);
 
-        // Generate available time slots based on service duration
-        const duration = parseInt(service.duration);
+        const bookedSlots = bookedSlotsResult.recordset.map(record => 
+            JSON.parse(record.meeting_slot)
+        );
+
+        // Generate available slots
         let availableSlots = [];
+        const now = new Date();
+        const isToday = now.toDateString() === dateObj.toDateString();
+        const currentTime = now.toLocaleTimeString('en-US', { hour12: true });
 
         daySchedule.timeSlots.forEach(slot => {
-            // Check if slot overlaps with any booked slot
-            const isBooked = bookedSlots.some(bookedSlot => 
+            const isBooked = bookedSlots.some(bookedSlot =>
                 bookedSlot.start_time === slot.start_time &&
                 bookedSlot.end_time === slot.end_time
             );
+
+            // Skip slots that are in the past if date is today
+            if (isToday) {
+                const slotTime = new Date(`${date} ${slot.start_time}`);
+                if (slotTime < now) {
+                    return; // Skip this slot
+                }
+            }
 
             if (!isBooked && slot.status === 'available') {
                 availableSlots.push({

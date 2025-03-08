@@ -48,6 +48,6 @@ app.use((err, req, res, next) => {
 
 
 
-server.listen(PORT_HTTP, '192.168.0.101', () => {
+server.listen(PORT_HTTP, '192.168.0.100', () => {
     console.log(`Server running on http://0.0.0.0:${PORT_HTTP}`);
 });

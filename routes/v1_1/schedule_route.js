@@ -154,12 +154,6 @@ router.post('/add_schedule', async (req, res) => {
                 `);
         }
 
-        // Write processed schedules to data.json
-        // const fs = require('fs');
-        // const path = require('path');
-        // const dataFilePath = path.join(__dirname, '..', 'data.json');
-        
-        // fs.writeFileSync(dataFilePath, JSON.stringify(processedSchedules, null, 4), 'utf8');
 
         res.status(200).json({
             success: true,
